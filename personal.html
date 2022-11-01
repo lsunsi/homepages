@@ -1,0 +1,103 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>🗿 prazer, lucas</title>
+
+		<meta name="description" content="Behold: my name and some links I guess">
+		<meta name="author" content="lsunsi">
+
+		<style>
+			html, body {
+				height: 100%;
+				margin: 0;
+			}
+
+			main {
+				height: 100%;
+				background-color: #f8f8f2;
+				font-family: Verdana, Geneva, sans-serif;
+
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.names {
+				text-align: center;
+				color: #f8f8f2;
+				background-color: #44475a;
+				width: 30%;
+				padding: 8px;
+			}
+
+			.names > .short {
+				font-size: 8em;
+			}
+
+			.names > .long {
+				font-size: 3em;
+			}
+
+			.links {
+				display: flex;
+				justify-content: space-between;
+				background-color: #44475a;
+				width: 30%;
+				padding: 8px;
+			}
+
+			@media (max-width: 1024px) {
+				.names {
+					width: 100%;
+				}
+
+				.names > .short {
+					font-size:  4em;
+				}
+
+				.names > .long {
+					font-size:  2em;
+				}
+
+				.links {
+					width: 100%;
+					flex-direction: column;
+					align-items: center;
+				}
+			}
+		</style>
+
+		<script>
+			const colors = ['#8be9fd', '#50fa7b', '#ffb86c', '#ff79c6', '#bd93f9', '#ff5555', '#f1fa8c'];
+
+			function update() {
+				const color = colors[colors.length * Math.random() | 0];
+				document.getElementById('links').style.backgroundColor = color;
+
+				setTimeout(update, 5000 * Math.random() | 0);
+			}
+
+			setTimeout(update, 0);
+		</script>
+	</head>
+
+	<body>
+		<main id="main">
+			<div class="names" id="names">
+				<div class="short">lsunsi</div>
+				<div class="long">lucas sunsi abreu</div>
+			</div>
+
+			<div class="links" id="links">
+				<a href="https://sr.ht/~lsunsi">some of my code</a>
+				<a href="https://github.com/lsunsi">rest of my code</a>
+				<a href="https://linkedin.com/in/lsunsi">employment status</a>
+			</div>
+		</main>
+	</body>
+</html>
